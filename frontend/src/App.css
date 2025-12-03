@@ -216,3 +216,216 @@ tbody tr:hover {
 .card>div {
   animation: fadeIn 0.5s ease;
 }
+
+/* Mode Switcher */
+.mode-switcher {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin: 1.5rem 0;
+  padding: 0.5rem;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mode-btn {
+  padding: 0.75rem 1.5rem;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.mode-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.mode-btn.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-color: #667eea;
+  color: white;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+  transform: translateY(-2px);
+}
+
+.mode-btn.active:hover {
+  box-shadow: 0 6px 16px rgba(102, 126, 234, 0.5);
+}
+
+/* Vendor Badge */
+.vendor-badge {
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.2) 0%, rgba(118, 75, 162, 0.2) 100%);
+  border: 1px solid rgba(102, 126, 234, 0.3);
+  border-radius: 8px;
+  display: inline-block;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.9);
+  animation: slideIn 0.3s ease;
+}
+
+.vendor-badge strong {
+  color: #fff;
+  text-transform: capitalize;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Smart Table Specific Styles */
+.smart-table {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.smart-table thead th {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.4) 0%, rgba(118, 75, 162, 0.4) 100%);
+  border-bottom: 2px solid rgba(102, 126, 234, 0.5);
+}
+
+.smart-table tbody tr:hover {
+  background: rgba(102, 126, 234, 0.15);
+  transform: scale(1.01);
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.2);
+}
+
+.smart-table tfoot td {
+  background: rgba(102, 126, 234, 0.1);
+  border-top: 2px solid rgba(102, 126, 234, 0.3);
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .mode-switcher {
+    width: 100%;
+  }
+
+  .mode-btn {
+    flex: 1;
+    justify-content: center;
+  }
+
+  .smart-table {
+    font-size: 0.85rem;
+  }
+
+  .smart-table th,
+  .smart-table td {
+    padding: 10px 8px;
+  }
+}
+
+/* Manual Controls */
+.manual-controls {
+  margin: 1.5rem 0;
+  padding: 1.5rem;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.helper-tip {
+  background: linear-gradient(135deg, rgba(251, 191, 36, 0.2) 0%, rgba(245, 158, 11, 0.2) 100%);
+  border: 1px solid rgba(251, 191, 36, 0.3);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.helper-tip strong {
+  color: #fbbf24;
+}
+
+.marker-inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.input-group label {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.input-group input {
+  padding: 0.75rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: white;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+}
+
+.input-group input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .mode-switcher {
+    width: 100%;
+  }
+
+  .mode-btn {
+    flex: 1;
+    justify-content: center;
+    font-size: 0.85rem;
+    padding: 0.6rem 1rem;
+  }
+
+  .smart-table {
+    font-size: 0.85rem;
+  }
+
+  .smart-table th,
+  .smart-table td {
+    padding: 10px 8px;
+  }
+
+  .marker-inputs {
+    grid-template-columns: 1fr;
+  }
+}
